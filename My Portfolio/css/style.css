@@ -10,14 +10,17 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     color: #222;
-    background: #ffffff;
+    background: #fff;
+}
+
+img {
+    max-width: 100%;
 }
 
 a {
@@ -25,177 +28,118 @@ a {
     text-decoration: none;
 }
 
-img {
-    max-width: 100%;
-    display: block;
-}
-
 .container {
-    width: min(1100px, 90%);
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 
-/* =========================================
-   Navigation
-========================================= */
+/* Navigation */
 
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-
-    background: rgba(255, 255, 255, 0.95);
-
-    border-bottom: 1px solid #e5e5e5;
-
+    background: #fff;
+    border-bottom: 1px solid #ddd;
     z-index: 1000;
 }
 
 .nav-container {
-    width: min(1100px, 90%);
-    height: 70px;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
-
+    min-height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .logo {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
 .nav-links {
-    list-style: none;
-
     display: flex;
+    list-style: none;
     gap: 30px;
 }
 
 .nav-links a {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-    color: #555;
+    color: #777;
 }
-
-
-/* Mobile menu button */
 
 .menu-toggle {
     display: none;
-
     border: none;
     background: none;
-
     font-size: 1.5rem;
     cursor: pointer;
 }
 
 
-/* =========================================
-   Hero
-========================================= */
+/* Hero */
 
 .hero {
-    min-height: 100vh;
-
+    min-height: 90vh;
     display: flex;
     align-items: center;
-
     padding-top: 70px;
-
     background: #f5f5f5;
 }
 
 .hero-content {
-    width: min(1100px, 90%);
-    margin: 0 auto;
+    max-width: 800px;
 }
 
 .eyebrow,
 .section-label {
-    margin-bottom: 10px;
-
-    font-size: 0.85rem;
-    font-weight: bold;
-
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-
-    color: #666;
+    color: #777;
+    margin-bottom: 15px;
 }
 
 .hero h1 {
-    max-width: 800px;
-
     font-size: clamp(3rem, 8vw, 6rem);
-    line-height: 1.05;
-
-    margin-bottom: 25px;
+    line-height: 1;
+    margin-bottom: 30px;
 }
 
 .hero h1 span {
-    color: #555;
+    display: block;
 }
 
-.hero-description {
+.hero p {
     max-width: 650px;
-
     font-size: 1.2rem;
-    color: #555;
-
-    margin-bottom: 35px;
-}
-
-
-/* =========================================
-   Buttons
-========================================= */
-
-.hero-buttons {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
+    color: #666;
+    margin-bottom: 30px;
 }
 
 .button {
     display: inline-block;
-
-    padding: 12px 22px;
-
+    padding: 12px 24px;
     background: #222;
-    color: white;
-
-    border: 2px solid #222;
-
-    transition: all 0.2s ease;
+    color: #fff;
+    transition: background 0.2s ease;
 }
 
 .button:hover {
     background: #444;
-    border-color: #444;
-}
-
-.button-secondary {
-    background: transparent;
-    color: #222;
-}
-
-.button-secondary:hover {
-    background: #222;
-    color: white;
 }
 
 
-/* =========================================
-   Sections
-========================================= */
+/* Sections */
 
 .section {
     padding: 100px 0;
@@ -206,105 +150,65 @@ img {
 }
 
 .section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 30px;
 }
 
 .section-intro {
-    max-width: 650px;
+    max-width: 700px;
     color: #666;
     margin-bottom: 50px;
 }
 
 
-/* =========================================
-   About
-========================================= */
+/* About */
 
 .about-content {
     display: grid;
-    grid-template-columns: 300px 1fr;
-
-    gap: 60px;
-
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
     align-items: center;
 }
 
 .about-image img {
     width: 100%;
-
-    aspect-ratio: 1 / 1;
-
-    object-fit: cover;
-
-    border-radius: 8px;
-}
-
-.about-text {
-    max-width: 650px;
+    display: block;
 }
 
 .about-text p {
     margin-bottom: 20px;
+    color: #555;
 }
 
 .text-link {
-    display: inline-block;
-
-    margin-top: 10px;
-
     font-weight: bold;
-
-    border-bottom: 2px solid #222;
-}
-
-.text-link:hover {
-    opacity: 0.6;
+    border-bottom: 1px solid #222;
+    padding-bottom: 3px;
 }
 
 
-/* =========================================
-   Projects
-========================================= */
+/* Projects */
 
 .project-grid {
     display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
 .project-card {
-    background: white;
-
-    padding: 30px;
-
+    background: #fff;
     border: 1px solid #ddd;
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-
-    box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 30px;
 }
 
 .project-number {
-    margin-bottom: 20px;
-
-    font-size: 0.9rem;
-
+    font-size: 0.8rem;
     color: #888;
+    margin-bottom: 40px;
 }
 
 .project-card h3 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin-bottom: 15px;
 }
 
@@ -316,42 +220,146 @@ img {
 .project-tags {
     display: flex;
     flex-wrap: wrap;
-
     gap: 8px;
-
     margin-bottom: 20px;
 }
 
 .project-tags span {
     padding: 5px 10px;
-
     background: #eee;
-
     font-size: 0.8rem;
 }
 
 
-/* =========================================
-   Skills
-========================================= */
+/* Games */
+
+.games-heading {
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+.games-heading h3 {
+    font-size: 2rem;
+}
+
+.showreel {
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.showreel h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.showreel-description {
+    max-width: 650px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.video-container {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #111;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.game-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.game-card-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #111;
+}
+
+.game-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.game-card:hover .game-card-image img {
+    transform: scale(1.03);
+}
+
+.game-card-content {
+    padding: 30px;
+}
+
+.game-year {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.game-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.game-card p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.game-card .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.game-card .project-tags span {
+    padding: 5px 10px;
+    background: #eee;
+    font-size: 0.8rem;
+}
+
+
+/* Skills */
 
 .skills-grid {
     display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
 }
 
 .skill {
-    padding: 25px;
-
+    padding: 30px;
     border: 1px solid #ddd;
+    background: #fff;
 }
 
 .skill h3 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .skill p {
@@ -359,141 +367,187 @@ img {
 }
 
 
-/* =========================================
-   Contact
-========================================= */
+/* Contact */
 
 .contact-section {
     background: #222;
-    color: white;
+    color: #fff;
 }
 
 .contact-section .section-label {
     color: #aaa;
 }
 
-.contact-section p {
+.contact-section .section-intro {
     color: #ccc;
-    max-width: 600px;
 }
 
 .contact-links {
     display: flex;
-
-    gap: 25px;
-
-    margin-top: 30px;
-
     flex-wrap: wrap;
+    gap: 30px;
 }
 
 .contact-links a {
-    padding-bottom: 5px;
-
-    border-bottom: 1px solid white;
-}
-
-.contact-links a:hover {
-    opacity: 0.6;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 3px;
 }
 
 
-/* =========================================
-   Footer
-========================================= */
+/* Footer */
 
 footer {
+    padding: 30px 0;
     background: #111;
     color: #aaa;
-
-    padding: 25px 0;
-}
-
-.footer-content {
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 20px;
-
     font-size: 0.9rem;
 }
 
 
-/* =========================================
-   Responsive Design
-========================================= */
+/* Game Pages */
+
+.game-hero {
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    padding-top: 70px;
+    background: #222;
+    color: #fff;
+}
+
+.game-hero .section-label {
+    color: #aaa;
+}
+
+.game-hero h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 1.05;
+    margin-bottom: 20px;
+}
+
+.game-hero p:last-child {
+    max-width: 650px;
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.game-information {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 80px;
+}
+
+.game-information p {
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+
+.game-details {
+    border-top: 1px solid #ddd;
+}
+
+.game-details div {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.game-details span {
+    color: #666;
+    text-align: right;
+}
+
+.screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.screenshot {
+    margin: 0;
+}
+
+.screenshot img {
+    width: 100%;
+    display: block;
+    border: 1px solid #ddd;
+    transition: transform 0.2s ease;
+}
+
+.screenshot img:hover {
+    transform: scale(1.01);
+}
+
+.screenshot figcaption {
+    padding-top: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+
+/* Responsive Design */
 
 @media (max-width: 800px) {
 
-    .menu-toggle {
-        display: block;
-    }
-
     .nav-links {
-        display: none;
-
         position: absolute;
-
         top: 70px;
         left: 0;
-
         width: 100%;
-
-        padding: 20px;
-
-        background: white;
-
-        border-bottom: 1px solid #ddd;
-
+        display: none;
         flex-direction: column;
-
-        gap: 15px;
+        gap: 0;
+        background: #fff;
+        border-bottom: 1px solid #ddd;
     }
 
     .nav-links.active {
         display: flex;
     }
 
+    .nav-links li {
+        border-top: 1px solid #eee;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 15px 5%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
 
     .about-content {
         grid-template-columns: 1fr;
-
-        gap: 30px;
+        gap: 40px;
     }
-
-    .about-image {
-        max-width: 300px;
-    }
-
 
     .project-grid {
         grid-template-columns: 1fr;
     }
 
-
-    .skills-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-
-    .footer-content {
-        flex-direction: column;
-    }
-}
-
-
-@media (max-width: 500px) {
-
-    .section {
-        padding: 70px 0;
+    .game-grid {
+        grid-template-columns: 1fr;
     }
 
     .skills-grid {
         grid-template-columns: 1fr;
     }
 
-    .hero h1 {
-        font-size: 3rem;
+    .game-information {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .screenshot-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .game-details span {
+        text-align: right;
     }
 }
